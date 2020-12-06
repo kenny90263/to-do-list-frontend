@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/*
+Author： kenny
+Date： 2020/12/1
+*/
+body{
+    font-family: Microsoft JhengHei !important;
+    background: #DFEDF9;
+    
+}
+
+:focus{
+    outline: 3px dotted #ea5455;
+    transition: 0.2s;
+}
+
+.to-do-list-area{
+    max-width: 70%;
+    padding: 15px 0;
+}
+
+.title{
+    color: #3063AB;
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.title span{
+    margin-left: 5px;
+    font-size: 0.6em;
+}
+
+.to-do-list{
+    max-width: 70%;
+    list-style: none;
+    padding: 0;
+    font-weight: bold;
+    margin: 0 auto;
+    max-height: 485px;
+    overflow: scroll;
+}
+
+.to-do-list li{
+    background: #FFF;
+    font-size: 1.1em;
+    padding: 12px 15px 12px 55px;
+    position: relative;
+}
+
+.to-do-list li:not(:last-child){
+    margin-bottom: 2px;
+}
+
+.to-do-list li:hover{
+    background: #f8f8f8;
+    cursor: pointer;
+}
+
+.to-do-list li input{
+    position: absolute;
+    left: 25px;
+    top: 18px;
+    transform: scale(1.6);
+}
+
+.to-do-list li .to-do-delete{
+    float: right;
+    display: block;
+    background: #fdcfdf;
+    padding: 1px 5px;
+    font-size: 0.8em;
+}
+
+.to-done{
+    margin-top: 100px;
+}
+
+.done-list li{
+    font-weight: normal;
+    text-decoration: line-through;
+    color: #b1b1b1;
+}
+
+/* to-do-detail*/
+.to-do-detail.container{
+    max-width: 55%;
+}
+
+@media(max-width: 768px){
+    .to-do-detail.container{
+        max-width: 80%;
+    }
+}
+
+.to-do-detail{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    padding: 32px;
+    left: -80%;
+    overflow: scroll;
+    background: #E6E6E6;
+    transition: all 0.8s;
+}
+
+.to-do-detail.show-detail{
+    left: 0;
+    transition: all 0.8s;
+}
+
+.to-do-detail .detail-title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.to-do-detail p{
+    font-size: 1.2em;
+    margin: 32px 0;
+}
+
+.to-do-detail p::first-letter{
+    margin-left: 2.1em;
+}
+
+/* add-to-do-list */
+.add-to-do-list{
+    background:#fdcfdf;
+    position: fixed;
+    left: 15%;
+    width: 70%;
+    bottom: 0;
+}
+
+.add-to-do-list{
+    padding: 32px;
+}
+
+.add-lists-title{
+    text-align: center;
+    margin-bottom: 32px;
+    font-weight: bold;
+}
+
+.add-to-do-list input[type="text"],
+.add-to-do-list input[type="submit"]
+{
+    width: 100%;
+    padding: 15px 10px;
+    border: none;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
