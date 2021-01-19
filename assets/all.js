@@ -23,7 +23,22 @@ jQuery(document).ready(function () {
 
     });
 
+    $('.to-do-delete').on('click', function (e) {
+       
+            $(this).parent('li').remove();
 
+
+        // 代辦事項數量重新計算
+        var ToDoListNum = $('.to-do li').length;
+        if (ToDoListNum >= 1) {
+            $('.to-do .title span').text("(" + ToDoListNum + ")");
+        } else {
+            $('.to-do .title span').text("(0)");
+        }
+
+    });
+
+   
 
 
 
